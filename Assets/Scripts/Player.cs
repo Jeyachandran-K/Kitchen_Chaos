@@ -16,7 +16,33 @@ public class Player : MonoBehaviour
 
         isWalking= moveDir != Vector3.zero;
 
-        transform.position += moveDir*Time.deltaTime*playerSpeed ;
+        float moveDistance =playerSpeed*Time.deltaTime;
+
+        float playerRadius = 0.7f;
+        float playerHeight = 2f;
+        bool canMove = !Physics.CapsuleCast(transform.position, transform.position + new Vector3(0, playerHeight,0), playerRadius, moveDir,moveDistance);
+        if(canMove)
+        {
+            transform.position += moveDir * moveDistance;
+        }
+        else
+        {
+            Vector3 moveDirX = new Vector3(moveDir.x, 0, 0).normalized;
+            Vector3 moveDirZ = new Vector3(0,0,moveDir.z).normalized;
+            bool canMoveX = !Physics.CapsuleCast(transform.position, transform.position + Vector3.up * playerHeight, playerRadius, moveDirX, moveDistance);
+            bool canMoveZ = Physics.CapsuleCast(transform.position,transform.position + Vector3.up * playerHeight,playerRadius, moveDirZ, moveDistance);
+            if (canMoveX)
+            {
+                transform.position += moveDirX * moveDistance;
+            }
+            else if(canMoveZ){ 
+                transform.position += moveDirZ * moveDistance;
+            }
+            else
+            {
+
+            }
+        }
 
         float rotateSpeed = 10f;
 
