@@ -14,39 +14,40 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   currentVersion: 1.01
   subtype: kitchenchaos
-  lastShownTimestamp: 1765783406
+  lastShownTimestamp: 1765889787
   lastUpdateResponse:
-    version: 1.00
+    version: 1.01
     versionUrl: https://unitycodemonkey.com
-  checkedLastUpdateTimestamp: 1765783406
+  checkedLastUpdateTimestamp: 1765889787
   lastQOTDResponse:
-    questionId: 163
-    questionText: What is the purpose of Unity Hub?
-    answerA: Provide a space for the community to interact
-    answerB: Manage different Unity versions and Projects
-    answerC: Dashboard for Unity services
+    questionId: 252
+    questionText: What is the significance of January 1st, 1970?
+    answerA: Skyrim Release Date on the Magnavox Odyssey
+    answerB: Start of Unix Time
+    answerC: 
     answerD: 
     answerE: 
-  lastQotdTimestamp: 1765783406
+  lastQotdTimestamp: 1765889787
   lastDynamicHeaderResponse:
-    topImageUrl: https://codemonkeyexternal.blob.core.windows.net/external/Misc/humbleBundleSyntyMar25.png
-    topText: Make ANY game with these awesome Assets! (96% OFF ENDS SOON!)
-    topLink: humblebundle
-    bottomText: Learn Unity DOTS for MASSIVE Performance Boosts! (and make an RTS)
-    bottomLink: dotscourse
-  lastDynamicHeaderTimestamp: 1765783407
+    topImageUrl: https://codemonkeyexternal.blob.core.windows.net/external/Misc/unityCodeMonkeyBundleDec2025.png
+    topText: I made a Bundle alongside the Asset Store! Awesome deal on new-never-discounted
+      tools!
+    topLink: cmbundleassetstore
+    bottomText: My 10+ Years of C# Knowledge in 1 Course!
+    bottomLink: csharpcourse
+  lastDynamicHeaderTimestamp: 1765889787
   websiteLatestMessage:
     text: <a href="https://cmonkey.co/freecourses">Check out all my FREE courses!
       Click here!</a>
-  websiteLatestMessageTimestamp: 1765783406
+  websiteLatestMessageTimestamp: 1765889787
   websiteLatestVideos:
     videos:
-    - youTubeId: ZIg7VoD9ptI
-      title: The FUTURE of Unity in 2025 and BEYOND!
-    - youTubeId: W_XOZAWJF24
-      title: I made the MOST PROFITABLE Game as a Test!
-    - youTubeId: J0KMvH-yFmA
-      title: TOP 10 NEW Games, Made with Unity! (FEBRUARY 2025)
-    - youTubeId: DOSLOa7cnoE
-      title: I SHOULD have done this a long time ago, and YOU too!
-  websiteLatestVideosTimestamp: 1765783406
+    - youTubeId: CGQovJjijwE
+      title: FREE DOWNLOAD 56 Project Files!
+    - youTubeId: OwxThbyAmOw
+      title: TOP 10 FREE NEW Assets DECEMBER 2025!
+    - youTubeId: EB0WQA6qjbI
+      title: Unity 6.3 LTS is RELEASED! (This is the one you should use!)
+    - youTubeId: Lg0ARMsa2ZU
+      title: Thanks to YOU I won TWO awards!
+  websiteLatestVideosTimestamp: 1765889787

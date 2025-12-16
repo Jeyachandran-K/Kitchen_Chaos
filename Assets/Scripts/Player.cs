@@ -1,14 +1,44 @@
+using System;
 using UnityEngine;
 using UnityEngine.InputSystem;
+using UnityEngine.Rendering;
 
 
 public class Player : MonoBehaviour
 {
+    public static Player Instance {  get; private set; }
+
     [SerializeField] private float playerSpeed;
     [SerializeField] private LayerMask countersLayerMask;
 
     private bool isWalking;
     private Vector3 lastMoveDir;
+    private ClearCounter selectedCounter;
+
+    public event EventHandler<OnCounterSelectedEventArgs> OnCounterSelected;
+
+    public class OnCounterSelectedEventArgs : EventArgs
+    {
+        public ClearCounter selectedCounter;
+    }
+
+    private void Awake()
+    {
+        Instance = this;
+    }
+
+    private void Start()
+    {
+        GameInput.Instance.OnInteraction += Player_OnInteraction;
+    }
+
+    private void Player_OnInteraction(object sender, System.EventArgs e)
+    {
+        if (selectedCounter != null)
+        {
+            selectedCounter.Interact();
+        }
+    }
 
     private void Update()
     {
@@ -37,8 +67,19 @@ public class Player : MonoBehaviour
         {
             if(raycastHit.transform.TryGetComponent(out ClearCounter clearCounter))
             {
-                clearCounter.Interact();
+                if(clearCounter != selectedCounter)
+                {
+                    SetSelectedCounter(clearCounter);
+                }
             }
+            else
+            {
+                SetSelectedCounter(null);
+            }
+        }
+        else
+        {
+            SetSelectedCounter(null);
         }
     }
 
@@ -84,5 +125,10 @@ public class Player : MonoBehaviour
         transform.forward = Vector3.Slerp(transform.forward, moveDir, Time.deltaTime * rotateSpeed);
 
 
+    }
+    private void SetSelectedCounter(ClearCounter selectedCounter)
+    {
+        this.selectedCounter = selectedCounter;
+        OnCounterSelected?.Invoke(this, new OnCounterSelectedEventArgs { selectedCounter = selectedCounter });
     }
 }
