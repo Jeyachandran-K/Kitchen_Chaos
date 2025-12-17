@@ -127,6 +127,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 206661093562068475, guid: 530c03156592b1248975e7c373f512fa, type: 3}
+      propertyPath: tomatoPrefab
+      value: 
+      objectReference: {fileID: 1207754135818525546, guid: fbe3b08198b31404698ebc210ddc6dfa, type: 3}
     - target: {fileID: 1125383430698032278, guid: 530c03156592b1248975e7c373f512fa, type: 3}
       propertyPath: m_Name
       value: ClearCounter (1)
