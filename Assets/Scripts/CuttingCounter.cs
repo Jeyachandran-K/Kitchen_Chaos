@@ -34,11 +34,7 @@ public class CuttingCounter : BaseCounter
         if (HasKitchenObject())
         {
             GetKitchenObject().DestroySelf();
-            Transform cutKitchenObjectTransform = Instantiate(cutKitchenObjectSO.prefab);
-            KitchenObject kitchenObject = cutKitchenObjectTransform.GetComponent<KitchenObject>();
-
-            kitchenObject.SetKitchenObjectParent(this);
-
+            KitchenObject.SpawnKitchenObject(cutKitchenObjectSO, this);
         }
     }
 
