@@ -89,7 +89,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.Outline
   m_EffectColor: {r: 0, g: 0, b: 0, a: 0.5}
-  m_EffectDistance: {x: 1, y: -1}
+  m_EffectDistance: {x: 0, y: 0}
   m_UseGraphicAlpha: 1
 --- !u!1 &4707830305344352101
 GameObject:
@@ -179,6 +179,7 @@ GameObject:
   - component: {fileID: 3612521652606246587}
   - component: {fileID: 1520338369499604569}
   - component: {fileID: 7721311445470107115}
+  - component: {fileID: 5099636513901233063}
   m_Layer: 5
   m_Name: ProgressBarUI
   m_TagString: Untagged
@@ -284,6 +285,18 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::ProgressBarUI
   image: {fileID: 4563065011513367576}
   cuttingCounter: {fileID: 5145691879989431334}
+--- !u!114 &5099636513901233063
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6972398968917187642}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 73f09e31e7b06bc4da64d59c4a0d6790, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::LookAtCamera
 --- !u!1001 &3644023708729852012
 PrefabInstance:
   m_ObjectHideFlags: 0
