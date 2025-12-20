@@ -9,7 +9,7 @@ public class CuttingCounter : BaseCounter
     {
         if (!HasKitchenObject())
         {
-            if (player.HasKitchenObject())
+            if (player.HasKitchenObject() && player.GetKitchenObject().GetKitchenObjectSO().isCuttable)
             {
                 player.GetKitchenObject().SetKitchenObjectParent(this);
             }
