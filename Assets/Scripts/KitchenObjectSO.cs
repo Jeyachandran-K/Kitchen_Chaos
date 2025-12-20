@@ -7,4 +7,5 @@ public class KitchenObjectSO : ScriptableObject
     public Sprite sprite;
     public string objectName;
     public bool isCuttable;
+    public int maxCutsRequired;
 }

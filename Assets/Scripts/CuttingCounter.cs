@@ -1,9 +1,22 @@
+using System;
 using UnityEngine;
 
 public class CuttingCounter : BaseCounter
 {
 
     [SerializeField]private CutKitchenObjectSO[] cutKitchenObjectSOArray;
+
+    private int numberOfCuts;
+    private float progressPercent;
+
+    public event EventHandler<OnObjectCutEventArgs> OnObjectCut;
+
+    public class OnObjectCutEventArgs : EventArgs
+    {
+        public float progressPercent;
+    }
+
+
 
     public override void Interact(Player player)
     {
@@ -12,6 +25,7 @@ public class CuttingCounter : BaseCounter
             if (player.HasKitchenObject() && player.GetKitchenObject().GetKitchenObjectSO().isCuttable)
             {
                 player.GetKitchenObject().SetKitchenObjectParent(this);
+                numberOfCuts = 0;
             }
             else
             {
@@ -36,10 +50,20 @@ public class CuttingCounter : BaseCounter
         {
             if (GetKitchenObject().GetKitchenObjectSO().isCuttable)
             {
-                KitchenObjectSO outputKitchenObjectSO = GetInputOutputKitchenObjectSO(GetKitchenObject().GetKitchenObjectSO());
-                GetKitchenObject().DestroySelf();
-                SetKitchenObject(null);
-                KitchenObject.SpawnKitchenObject(outputKitchenObjectSO, this);
+                numberOfCuts++;
+                progressPercent = (float)numberOfCuts / GetKitchenObject().GetKitchenObjectSO().maxCutsRequired;
+                OnObjectCut?.Invoke(this,new OnObjectCutEventArgs
+                {
+                    progressPercent=progressPercent,
+                });
+
+                if (numberOfCuts >= GetKitchenObject().GetKitchenObjectSO().maxCutsRequired)
+                {
+                    KitchenObjectSO outputKitchenObjectSO = GetInputOutputKitchenObjectSO(GetKitchenObject().GetKitchenObjectSO());
+                    GetKitchenObject().DestroySelf();
+                    SetKitchenObject(null);
+                    KitchenObject.SpawnKitchenObject(outputKitchenObjectSO, this);
+                } 
             }
             else
             {
