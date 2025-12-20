@@ -4,6 +4,7 @@ public class CuttingCounter : BaseCounter
 {
 
     [SerializeField]private CutKitchenObjectSO[] cutKitchenObjectSOArray;
+
     public override void Interact(Player player)
     {
         if (!HasKitchenObject())
@@ -33,9 +34,17 @@ public class CuttingCounter : BaseCounter
     {
         if (HasKitchenObject())
         {
-            KitchenObjectSO inputKitchenObjectSO = GetInputOutputKitchenObjectSO(GetKitchenObject().GetKitchenObjectSO());
-            GetKitchenObject().DestroySelf();
-            KitchenObject.SpawnKitchenObject(inputKitchenObjectSO, this);
+            if (GetKitchenObject().GetKitchenObjectSO().isCuttable)
+            {
+                KitchenObjectSO outputKitchenObjectSO = GetInputOutputKitchenObjectSO(GetKitchenObject().GetKitchenObjectSO());
+                GetKitchenObject().DestroySelf();
+                SetKitchenObject(null);
+                KitchenObject.SpawnKitchenObject(outputKitchenObjectSO, this);
+            }
+            else
+            {
+                Debug.LogError("Object is not cuttable");
+            }
         }
     }
 

@@ -15,3 +15,4 @@ MonoBehaviour:
   prefab: {fileID: 1207754135818525546, guid: 67d40b7dce0eb314aa93c0a219b42997, type: 3}
   sprite: {fileID: 21300000, guid: 91e8fe3de9249fc44b7bdd8050062896, type: 3}
   objectName: Tomato
+  isCuttable: 1

@@ -12,5 +12,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d252a6f41d67d254baf3dc69f4945423, type: 3}
   m_Name: Tomato-TomatoSlices
   m_EditorClassIdentifier: Assembly-CSharp::CutKitchenObjectSO
-  inputKitchenObjectSO: {fileID: 0}
-  outputKitchenObjectSO: {fileID: 0}
+  inputKitchenObjectSO: {fileID: 11400000, guid: b16198ad28521e54aafb9add9eb527ec, type: 2}
+  outputKitchenObjectSO: {fileID: 11400000, guid: 7dbe8b7bbd5694746a7cb5a6c78b969a, type: 2}

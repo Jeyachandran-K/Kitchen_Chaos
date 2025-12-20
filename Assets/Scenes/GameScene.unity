@@ -1105,6 +1105,22 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5145691879989431334, guid: 494e28b580a502d4e92d51036eac856f, type: 3}
+      propertyPath: cutKitchenObjectSOArray.Array.size
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 5145691879989431334, guid: 494e28b580a502d4e92d51036eac856f, type: 3}
+      propertyPath: 'cutKitchenObjectSOArray.Array.data[0]'
+      value: 
+      objectReference: {fileID: 11400000, guid: 46bf7755bc7ce1e48bf26d1ded11cf26, type: 2}
+    - target: {fileID: 5145691879989431334, guid: 494e28b580a502d4e92d51036eac856f, type: 3}
+      propertyPath: 'cutKitchenObjectSOArray.Array.data[1]'
+      value: 
+      objectReference: {fileID: 11400000, guid: fd918cd873088a744830178f7ac2e48c, type: 2}
+    - target: {fileID: 5145691879989431334, guid: 494e28b580a502d4e92d51036eac856f, type: 3}
+      propertyPath: 'cutKitchenObjectSOArray.Array.data[2]'
+      value: 
+      objectReference: {fileID: 11400000, guid: 533dbc2ae8aec6245bd1333267f25387, type: 2}
     - target: {fileID: 9181197697993488307, guid: 494e28b580a502d4e92d51036eac856f, type: 3}
       propertyPath: m_Name
       value: CuttingCounter

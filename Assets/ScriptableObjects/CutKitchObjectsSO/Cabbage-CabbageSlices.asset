@@ -12,5 +12,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d252a6f41d67d254baf3dc69f4945423, type: 3}
   m_Name: Cabbage-CabbageSlices
   m_EditorClassIdentifier: Assembly-CSharp::CutKitchenObjectSO
-  inputKitchenObjectSO: {fileID: 0}
-  outputKitchenObjectSO: {fileID: 0}
+  inputKitchenObjectSO: {fileID: 11400000, guid: 8f304c97c6e0618429e18ba246836162, type: 2}
+  outputKitchenObjectSO: {fileID: 11400000, guid: f4e40514216bf324a8c5f977148178d8, type: 2}

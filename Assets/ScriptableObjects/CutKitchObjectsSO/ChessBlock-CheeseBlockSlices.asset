@@ -12,5 +12,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d252a6f41d67d254baf3dc69f4945423, type: 3}
   m_Name: ChessBlock-CheeseBlockSlices
   m_EditorClassIdentifier: Assembly-CSharp::CutKitchenObjectSO
-  inputKitchenObjectSO: {fileID: 0}
-  outputKitchenObjectSO: {fileID: 0}
+  inputKitchenObjectSO: {fileID: 11400000, guid: 38425b2a765657a46a64ae83981b5098, type: 2}
+  outputKitchenObjectSO: {fileID: 11400000, guid: 59c6b27c34f89784b8804979d013e35d, type: 2}
