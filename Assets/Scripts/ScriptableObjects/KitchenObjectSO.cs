@@ -8,4 +8,5 @@ public class KitchenObjectSO : ScriptableObject
     public string objectName;
     public bool isCuttable;
     public int maxCutsRequired;
+    public bool isCookable;
 }

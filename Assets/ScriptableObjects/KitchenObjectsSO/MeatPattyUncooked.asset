@@ -15,3 +15,6 @@ MonoBehaviour:
   prefab: {fileID: 1207754135818525546, guid: 9880900d3b5d5324cb5c60526b6e3b4d, type: 3}
   sprite: {fileID: 21300000, guid: aa1bacc24dde76e47b2ec0dd4e82385b, type: 3}
   objectName: MeatPattyUncooked
+  isCuttable: 0
+  maxCutsRequired: 0
+  isCookable: 1
